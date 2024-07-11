@@ -190,6 +190,7 @@ def recuperar_conta_cliente(cliente):
         print("\n@@@ Cliente não possui conta! @@@")
         return
 
+    # FIXME: não permite cliente escolher a conta
     return cliente.contas[0]
 
 def depositar(clientes):
@@ -243,7 +244,7 @@ def exibir_extrato(clientes):
 
 def criar_cliente(clientes):
     cpf = input("Informe o CPF (somente número):")
-    cliente = filtrar_cliente(cpf,clientes)
+    cliente = filtrar_usuario(cpf,clientes)
 
     if cliente:
         print("\n@@@ Já existe usuário com esse CPF! @@")
